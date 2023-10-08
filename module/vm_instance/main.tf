@@ -11,7 +11,7 @@ resource "google_compute_instance" "vm" {
   }
 
   network_interface {
-    network = var.network_id
+    network    = var.network_id
     subnetwork = var.subnet_id
 
     access_config {
@@ -33,9 +33,9 @@ resource "google_compute_instance" "vm" {
 }
 
 resource "google_compute_disk" "disk_attach" {
-    name = var.disk_name
-    type = var.disk_type
-    zone = var.disk_zone
-    size = var.disk_size
-    #provisioned_iops = 2600
+  name = var.disk_name
+  type = var.disk_type
+  zone = var.disk_zone
+  size = var.disk_size
+  #provisioned_iops = 2600
 }
