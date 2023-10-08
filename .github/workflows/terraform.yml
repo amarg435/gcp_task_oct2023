@@ -58,3 +58,9 @@ jobs:
       run: terraform apply -auto-approve -input=false
       env:
         cli_config_credentials_token: ${{ secrets.GCP_CRED }}
+
+    - name: Terraform Destory
+      #if: github.ref == 'refs/heads/"main"' && github.event_name == 'push'
+      run: terraform destory -auto-approve -input=false
+      env:
+        cli_config_credentials_token: ${{ secrets.GCP_CRED }}
