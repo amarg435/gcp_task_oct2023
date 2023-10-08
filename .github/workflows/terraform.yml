@@ -59,8 +59,8 @@ jobs:
       env:
         cli_config_credentials_token: ${{ secrets.GCP_CRED }}
 
-    - name: Terraform Destory
+    - name: Terraform Destroy
       #if: github.ref == 'refs/heads/"main"' && github.event_name == 'push'
-      run: terraform destory -auto-approve -input=false
+      run: terraform destroy -auto-approve -input=false
       env:
         cli_config_credentials_token: ${{ secrets.GCP_CRED }}
