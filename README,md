@@ -1,0 +1,12 @@
+Tasks:
+
+1. Command to build docker image form Dockerfile
+docker build -t docker_cust_oct2023 .
+
+2. Command to create and run container form docker image
+docker run --name oct_2023_2 docker_cust_oct2023 sleep infinity
+
+3. Command to push images to Docker hub
+docker login --username=dovyear2020
+docker tag docker_cust_oct2023:latest docker_cust_oct2023:docker_task
+docker push docker_cust_oct2023:docker_task
